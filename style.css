@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 @font-face {
     font-family: sahel;
     src: url("fonts/Sahel.eot") format("eot"),
@@ -6,12 +7,13 @@
     font-weight: bolder;
   }
 *,body{
-    font-family:sans-serif;
+    font-family: 'Maven Pro', sahel;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(119, 0, 216);
 }
 ul,li,ol{
     text-decoration: none;
@@ -22,6 +24,7 @@ a{
     color: black;
 }
 html,body{
+    width: 100%;
     height: 100%;
 }
 .center{
@@ -37,13 +40,166 @@ html,body{
     margin: 10px;
     color: aliceblue;
 }
-button{
-    width: 100px;
-    height: 50px;
+.start{
+    width: 150px;
+    height: 55px;
     margin: 10px;
     border: none;
-    font-size: 18px;
-    background-color: rgb(114, 114, 114);
-    color: aliceblue;
+    border-radius: 10px;
+    font-size: 21px;
+    background-color: whitesmoke;
+    color: rgb(119, 0, 216);
     margin-top: 20px;
+    box-shadow: 3px 4px 10px -2px rgb(54, 54, 54);
+    cursor: pointer;
+    z-index: 11;
+    transition: color .3s, background-color .3s, z-index 1s;
+}
+.start:hover{
+    background-color: rgb(119, 0, 216);
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+.dark{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 10;
+    transition: all 1s ease-out;
+}
+.modal{
+    position: fixed;
+    min-width: 480px;
+    min-height: 400px;
+    border: none;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 35px;
+    font-size: 12px;
+    z-index: 11;
+    box-shadow: 3px 3px 25px -5px rgb(51, 51, 51);
+    opacity: 0;
+    transform: translateY(-100vh);
+    transition: all .8s ease-out;
+}
+.modal .title{
+    display: flex;
+    position: relative;
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding: 0 0 20px 0;
+}
+.modal .title h1{
+    color: rgb(119, 0, 216);
+}
+.modal .title button{
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    color: rgb(119, 0, 216);
+    cursor: pointer;
+}
+.modal .title button:active{
+    color: red;
+    transition: color .1s;
+}
+.modal .main p{
+    font-size: 20px;
+}
+.modal .main .social{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    text-align: center;
+}
+.modal .main .social i{
+    min-width: 62px;
+    min-height: 62px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color .1s, background-color .1s;
+}
+.modal .main .social i:nth-child(5){
+    border: 2px solid rgb(0, 81, 255);
+    color: rgb(0, 81, 255);
+}
+.modal .main .social i:nth-child(5):hover{
+    background-color: rgb(0, 81, 255);
+    color: whitesmoke;
+}
+.modal .main .social i:nth-child(4){
+    border: 2px solid rgb(0, 169, 211);
+    color: rgb(0, 169, 211);
+}
+.modal .main .social i:nth-child(4):hover{
+    background-color: rgb(0, 169, 211);
+    color: whitesmoke;
+}
+.modal .main .social i:nth-child(3){
+    border: 2px solid rgb(255, 0, 64);
+    color: rgb(255, 0, 64);
+}
+.modal .main .social i:nth-child(3):hover{
+    background-color: rgb(255, 0, 64);
+    color: whitesmoke;
+}
+.modal .main .social i:nth-child(2){
+    border: 2px solid rgb(0, 173, 0);
+    color: rgb(0, 173, 0);
+}
+.modal .main .social i:nth-child(2):hover{
+    background-color: rgb(0, 173, 0);
+    color: whitesmoke;
+}
+.modal .main .social i:nth-child(1){
+    border: 2px solid rgb(0, 132, 255);
+    color: rgb(0, 132, 255);
+}
+.modal .main .social i:nth-child(1):hover{
+    background-color: rgb(0, 132, 255);
+    color: whitesmoke;
+}
+.footer p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 20px;
+}
+.footer .links .link{
+    font-size: 20px;
+}
+.footer .links .link i{
+    margin: 0 10px;
+}
+.footer .links button{
+    width: 80px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(119, 0, 216);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: color .1s, background-color .1s;
+}
+.footer .links button:hover{
+    border: 2px solid rgb(119, 0, 216);
+    color: rgb(119, 0, 216);
+    background-color: transparent;
 }
